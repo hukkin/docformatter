@@ -563,8 +563,7 @@ def detect_encoding(filename):
     """Return file encoding."""
     try:
         with open(filename, 'rb') as input_file:
-            from lib2to3.pgen2 import tokenize as lib2to3_tokenize
-            encoding = lib2to3_tokenize.detect_encoding(input_file.readline)[0]
+            encoding = tokenize.detect_encoding(input_file.readline)[0]
 
             # Check for correctness of encoding.
             with open_with_encoding(filename, encoding) as input_file:
