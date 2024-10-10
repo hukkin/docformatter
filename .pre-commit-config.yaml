@@ -1,0 +1,9 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
+  hooks:
+  - id: check-yaml
+- repo: https://github.com/pre-commit/pre-commit
+  rev: dbccd57db0e9cf993ea909e929eea97f6e4389ea  # frozen: v4.0.0
+  hooks:
+  - id: validate_manifest
